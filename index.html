@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poems by Felix</title>
+  <meta name="description" content="Poems written by Felix.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header id="intro">
+      <h1>Poems by Felix</h1>
+      <p class="intro">
+        Welcome. This is where I keep the poems I write. New ones are added
+        as I finish them. Search for a word or a title, or open any poem below.
+      </p>
+    </header>
+
+    <section class="search-wrap" aria-label="Find a poem">
+      <label for="search" class="sr-only">Search poems</label>
+      <input id="search" type="search" placeholder="Search by title or a word from a poem" autocomplete="off">
+      <p id="count" class="count" aria-live="polite"></p>
+    </section>
+
+    <section id="list-view">
+      <ul id="poem-list" class="poem-list"></ul>
+      <p id="message" class="message"></p>
+    </section>
+
+    <article id="reader-view" hidden>
+      <a href="#" id="back" class="back">&larr; All poems</a>
+      <h2 id="reader-title"></h2>
+      <div id="reader-body" class="poem"></div>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Felix</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
